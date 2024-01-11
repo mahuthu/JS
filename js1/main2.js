@@ -48,3 +48,107 @@ console.log(grade)
 console.log(typeof testscore)
 console.log(typeof grade)
 console.log(typeof collegestudent)
+
+
+
+
+
+if(player1 === computer){
+    console.log("tie")
+}
+else if(player1 === "rock"){
+    if(computer === "paper"){
+        console.log("computer wins")
+    }else{
+        console.log("player1 wins")
+    }
+}
+else if(player1 === "paper"){
+    if(computer === "scissors"){
+        console.log("computer wins")
+    }else{
+        console.log("player1 wins")
+    }
+}
+else if(player1 === "scissors"){
+    if(computer === "rock"){
+        console.log("computer wins")
+    }else{
+        console.log("player1 wins")
+    }
+}
+else{
+    console.log("invalid input")
+}
+
+
+
+
+let playerOne = "rock";
+let computer = "paper";
+
+switch(playerOne){
+    case computer:
+        console.log("tie")
+        break;
+
+    case "rock":
+        if(computer === "paper"){
+            console.log("computer wins")
+        }else{
+            console.log("player1 wins")
+        }
+        break;
+    case "paper":
+        if(computer === "scissors"){
+            console.log("computer wins")
+        }else{
+            console.log("player1 wins")
+        }
+        break;
+
+    case "scissors":
+        if(computer === "rock"){
+            console.log("computer wins")
+        }else{
+            console.log("player1 wins")
+        }
+        break;
+    default:
+        console.log("invalid input")
+        break;
+    
+}
+    
+//ternary operator
+let soup1 = "chicken noodle soup";
+let response = soup1 ? `here is your ${soup1}` : "we are out of soup";
+
+console.log(response)
+
+let soup2 = "chicken noodle soup";
+let isCustomerBannded = false;
+let soupAccess = isCustomerBannded ? "no soup for you" : soup2 ? `here is your ${soup2}` : "we are out of soup";
+console.log(soupAccess)
+
+
+let testscore1 = 50;
+let myGrade = testscore1 >= 90 ? "A" : testscore1 >= 80 ? "B" : testscore1 >= 70 ? "C" : testscore1 >= 60 ? "D" : "F";
+
+let player1 = "rock";
+let computer1 = "paper";
+let results = 
+   player1 === computer1 ? "tie"
+ : player1 === "rock" && computer1 === "paper" ? "computer wins" 
+ : player1 === "paper" && computer1 === "scissors" ? "computer wins"
+ : player1 === "scissors" && computer1 === "rock" ? "computer wins"
+ : "player1 wins";
+ console.log(results)
+
+
+ //user input
+ alert("hello world")
+ confirm("OK === true, cancel === false")
+ 
+
+

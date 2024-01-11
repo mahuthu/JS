@@ -38,4 +38,6 @@ console.log(Math.floor(Math.random()*10)+1)
 console.log(Math.floor(Math.random()*4))
 
 
-console.log("peter".charAt(Math.floor(Math.random()*4)+1))//from1-4
+console.log("peter".charAt(Math.floor(Math.random()*4)))//from1-4
+const anyName = "jonathan"
+console.log(anyName.charAt(Math.floor(Math.random() * anyName.length))) 
