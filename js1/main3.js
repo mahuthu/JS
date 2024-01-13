@@ -54,16 +54,11 @@ if(playGame){
         if (playerOne === "rock" || playerOne === "paper" || playerOne === "scissors"){
             let computerChoice = Math.floor(Math.random()*3 + 1);
             let computer = computerChoice === 1 ? "rock" : computerChoice === 2 ? "paper" : "scissors" ;
-            let results =
-            playerOne === computer
-                ? "tie"
-                : playerOne === "rock" && computer === "paper"
-                ? `playerOne: ${playerOne}\ncomputer: ${computer}\ncomputer wins`
-                : playerOne === "paper" && computer === "scissors"
-                ? `playerOne: ${playerOne}\ncomputer: ${computer}\ncomputer wins`
-                : playerOne === "scissors" && computer === "rock"
-                ? `playerOne: ${playerOne}\ncomputer: ${computer}\ncomputer wins`
-                : "player1 wins";
+            let results = playerOne === computer ? "tie"
+            : playerOne === "rock" && computer === "paper" ? `playerOne: ${playerOne}\ncomputer: ${computer}\ncomputer wins`
+            : playerOne === "paper" && computer === "scissors" ? `playerOne: ${playerOne}\ncomputer: ${computer}\ncomputer wins`
+            : playerOne === "scissors" && computer === "rock" ? `playerOne: ${playerOne}\ncomputer: ${computer}\ncomputer wins`
+            : "player1 wins";
 
             alert(results)
             
