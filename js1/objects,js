@@ -1,0 +1,78 @@
+//objects
+// key-value pairs in curly braces
+const myObj = {name : "harry"}
+console.log(myObj.name)
+
+const anotherObj = { alive: true, age: 40,
+                     hobbies: ["reading", "writing", "coding"],
+                    beverages :{morning: "coffee", afternoon: "tea", evening: "wine"},
+                     action: function(){
+                        return `Time for ${this.beverages.morning}`
+                     }   }
+console.log(anotherObj.hobbies[1])
+console.log(anotherObj["hobbies"][1])
+console.log(anotherObj.beverages.afternoon)
+console.log(anotherObj.action())
+
+const vehicle = {
+    wheels : 4, //propert
+    engine: function(){ //method
+        return "vroom";
+    }
+}
+
+const truck  = Object.create(vehicle);
+truck.doors = 2;
+console.log(truck)
+console.log(truck.wheels) //inheritance
+console.log(truck.engine())
+
+const car = Object.create(vehicle);
+car.doors = 4;
+car.engine = function(){
+    return "vroom vroom";
+}
+console.log(car)
+console.log(car.wheels) //inheritance
+console.log(car.engine())//overriding
+
+const tesla = Object.create(car);
+console.log(tesla.engine())//overriding
+
+
+const band = {
+    vocals : "Freddie Mercury",
+    guitar : "Brian May",
+    bass : "John Deacon",
+    drums : "Roger Taylor",
+}
+
+band.keyboard = "Spike Edney"
+band.manager = function(){
+    return "Jim Beach"
+}
+delete band.drums
+
+console.log(Object.keys(band))
+console.log(Object.values(band))
+console.log(band.hasOwnProperty("drums"))
+
+for(let job in band){
+    console.log(band[job]);
+    console.log(`${job} : ${band[job]}`)
+
+}
+
+//destructuring objects
+const {vocals : myVariable} = band;
+console.log(myVariable)
+
+const {vocals, guitar, bass, drums} = band;
+console.log(vocals)
+
+
+function sings({vocals}){
+    return vocals;
+}
+console.log(sings(band))
+
