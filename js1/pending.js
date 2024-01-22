@@ -35,3 +35,40 @@ const renderUsers = async () => {
 };
 
 renderUsers();
+
+
+const getUserEmail = async (id) => {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
+    const user = await response.json();
+    
+    const userEmailArray = user.map(user => {
+        return user.email;
+    })
+
+    postToWebPage(userEmailArray)
+}
+
+const postToWebPage = (data) => {
+    console.log(data);
+}
+
+getUserEmail();
+
+
+//2nd parameter of fetch is an object that can be used to configure the request
+//method: GET, POST, PUT, DELETE
+//headers: content-type, accept
+//body: JSON.stringify(data)
+
+const getDadJoke = async () => {
+    const response = await fetch("https://icanhazdadjoke.com/",  {
+        method: "GET",
+        headers: {
+            Accept: "application/json" //text/plain, text/html, application/json
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+}
+
+getDadJoke();
